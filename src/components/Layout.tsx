@@ -28,7 +28,10 @@ export function Layout({ children }: LayoutProps) {
         <div className="min-h-screen bg-zinc-50/50 dark:bg-black selection:bg-emerald-500/30">
             {/* Mobile Header */}
             <div className="lg:hidden flex items-center justify-between p-4 bg-white/80 border-b border-zinc-200 dark:bg-black dark:border-zinc-800 sticky top-0 z-50 backdrop-blur-md">
-                <img src={logo} alt="Agencia Nova" className="h-10 w-auto object-contain" />
+                <div className="flex items-center gap-3">
+                    <img src={logo} alt="Agencia Nova" className="h-8 w-auto object-contain" />
+                    <span className="font-bold text-zinc-900 dark:text-white uppercase tracking-wide text-sm">Agência Nova</span>
+                </div>
                 <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-600 dark:text-zinc-300 transition-colors">
                     {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
@@ -77,6 +80,7 @@ export function Layout({ children }: LayoutProps) {
                     {/* Header for Desktop */}
                     <header className="hidden lg:flex items-center justify-between mb-8">
                         <div>
+                            <span className="text-xs font-bold text-emerald-500 uppercase tracking-widest mb-1 block">Agência Nova</span>
                             <h2 className="text-2xl font-bold text-zinc-800 dark:text-white">Visão Geral</h2>
                             <p className="text-sm text-zinc-500 mt-1 dark:text-zinc-400">Bem-vindo ao seu painel de controle financeiro.</p>
                         </div>
