@@ -30,7 +30,7 @@ function App() {
       case 'settings':
         return <div className="p-8 text-center text-zinc-500">Configurações em breve...</div>;
       default:
-        return <Dashboard />;
+        return <Dashboard events={events} />;
     }
   };
 
