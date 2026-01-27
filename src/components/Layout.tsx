@@ -10,18 +10,20 @@ function cn(...inputs: ClassValue[]) {
 
 interface LayoutProps {
     children: React.ReactNode;
+    currentView: string;
+    onNavigate: (view: string) => void;
 }
 
-export function Layout({ children }: LayoutProps) {
+export function Layout({ children, currentView, onNavigate }: LayoutProps) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     // Modern Navigation Items with better naming and icons
     const navItems = [
-        { icon: LayoutDashboard, label: 'Visão Geral', active: true },
-        { icon: Calendar, label: 'Eventos', active: false },
-        { icon: BarChart3, label: 'Relatórios', active: false },
-        { icon: Ticket, label: 'Vendas', active: false },
-        { icon: Settings, label: 'Configurações', active: false },
+        { icon: LayoutDashboard, label: 'Visão Geral', id: 'dashboard' },
+        { icon: Calendar, label: 'Eventos', id: 'events' },
+        { icon: BarChart3, label: 'Relatórios', id: 'reports' },
+        { icon: Ticket, label: 'Promotores & Cupons', id: 'coupons' }, // Renamed to include Promotores
+        { icon: Settings, label: 'Configurações', id: 'settings' },
     ];
 
     return (
@@ -49,20 +51,23 @@ export function Layout({ children }: LayoutProps) {
                         </div>
 
                         <nav className="flex-1 px-4 space-y-2">
-                            {navItems.map((item, index) => (
-                                <a
-                                    key={index}
-                                    href="#"
+                            {navItems.map((item) => (
+                                <button
+                                    key={item.id}
+                                    onClick={() => {
+                                        onNavigate(item.id);
+                                        setSidebarOpen(false); // Close mobile menu on click
+                                    }}
                                     className={cn(
-                                        "flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group text-sm font-medium",
-                                        item.active
+                                        "flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group text-sm font-medium w-full text-left",
+                                        currentView === item.id
                                             ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/20"
                                             : "text-zinc-400 hover:bg-zinc-900 hover:text-white"
                                     )}
                                 >
-                                    <item.icon className={cn("w-5 h-5 transition-colors", item.active ? "text-white" : "text-zinc-400 group-hover:text-white")} />
+                                    <item.icon className={cn("w-5 h-5 transition-colors", currentView === item.id ? "text-white" : "text-zinc-400 group-hover:text-white")} />
                                     {item.label}
-                                </a>
+                                </button>
                             ))}
                         </nav>
 

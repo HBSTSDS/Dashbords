@@ -48,4 +48,5 @@ export interface ProcessedEvent {
 
     // Metadata
     cortesias: number;
+    coupons?: Record<string, number>;
 }
