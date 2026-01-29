@@ -1,3 +1,5 @@
+import type { ManualEventData } from '../utils/storage';
+
 export interface SummaryRow {
     edition_id: string;
     edition_name: string;
@@ -46,8 +48,20 @@ export interface ProcessedEvent {
     preSaleRevenue: number;
     onlineRevenue?: number; // From "RECEITA INGRESSE"
 
+    // Demographics & Channel
+    location?: string; // Manual or parsed
+    avgAge?: number;
+    salesChannels?: {
+        pos: number;
+        site: number;
+        app: number;
+    };
+
     // Metadata
     cortesias: number;
     coupons?: Record<string, number>;
     totalCoupons?: number;
+
+    // Manual Data overrides/additions
+    manualData?: ManualEventData;
 }

@@ -33,10 +33,16 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "doorTM": 0,
     "dailySales": [],
     "preSaleRevenue": 30412,
-    "preSaleQty": 766
+    "preSaleQty": 766,
+    "avgAge": 22.8,
+    "salesChannels": {
+      "pos": 526,
+      "site": 182,
+      "app": 58
+    }
   },
   {
-    "id": "evt-auto-767",
+    "id": "evt-auto-2",
     "name": "DiMarola (19/12/2025)",
     "date": "2025-12-19",
     "totalRevenue": 67417,
@@ -75,34 +81,40 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "doorTM": 0,
     "dailySales": [],
     "preSaleRevenue": 67417,
-    "preSaleQty": 1185
+    "preSaleQty": 1185,
+    "avgAge": 21.8,
+    "salesChannels": {
+      "pos": 816,
+      "site": 278,
+      "app": 91
+    }
   },
   {
-    "id": "evt-auto-1952",
+    "id": "evt-auto-3",
     "name": "Erro 404 (23/01/2026)",
     "date": "2026-01-23",
     "totalRevenue": 37112,
     "totalAudience": 822,
     "cortesias": 374,
     "coupons": {
-      "PARKERS": 43,
-      "MGM": 30,
-      "JOA": 22,
-      "GIRLS": 21,
+      "NOITE": 1,
+      "STEPHANIEROCHA": 5,
       "RVC": 16,
       "BOLA": 13,
+      "FLAGE": 5,
+      "MGM": 30,
+      "PARKERS": 43,
+      "JOA": 22,
+      "BRAGA": 5,
+      "GIRLS": 21,
+      "SALIM": 6,
+      "ANABIA": 3,
+      "FESTASZS": 1,
       "CONECTA": 13,
       "GODOY": 8,
-      "SALIM": 6,
-      "STEPHANIEROCHA": 5,
-      "FLAGE": 5,
-      "BRAGA": 5,
       "AGONIA": 4,
-      "ANABIA": 3,
       "AGUIA": 2,
-      "VAMOS": 2,
-      "NOITE": 1,
-      "FESTASZS": 1
+      "VAMOS": 2
     },
     "totalCoupons": 200,
     "totalPayingQty": 448,
@@ -113,28 +125,34 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "doorTM": 0,
     "dailySales": [],
     "preSaleRevenue": 37112,
-    "preSaleQty": 822
+    "preSaleQty": 822,
+    "avgAge": 20.7,
+    "salesChannels": {
+      "pos": 586,
+      "site": 158,
+      "app": 78
+    }
   },
   {
-    "id": "evt-auto-2774",
+    "id": "evt-auto-4",
     "name": "Pista (14/11/2025)",
     "date": "2025-11-14",
     "totalRevenue": 32042,
     "totalAudience": 837,
     "cortesias": 398,
     "coupons": {
-      "PARKERS": 81,
-      "GODOY": 45,
-      "AGNOVA": 32,
-      "AGONIA": 31,
-      "BRAGA": 14,
-      "BIKINI": 14,
-      "GIRLS": 9,
-      "ANABIA": 7,
-      "FLAGE": 4,
       "LAGOA": 3,
+      "PARKERS": 81,
+      "AGONIA": 31,
+      "GODOY": 45,
+      "BRAGA": 14,
       "CONECTA": 2,
       "PARTIU": 2,
+      "AGNOVA": 32,
+      "BIKINI": 14,
+      "ANABIA": 7,
+      "GIRLS": 9,
+      "FLAGE": 4,
       "VODKA": 1
     },
     "totalCoupons": 245,
@@ -146,10 +164,16 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "doorTM": 0,
     "dailySales": [],
     "preSaleRevenue": 32042,
-    "preSaleQty": 837
+    "preSaleQty": 837,
+    "avgAge": 21.9,
+    "salesChannels": {
+      "pos": 564,
+      "site": 245,
+      "app": 28
+    }
   },
   {
-    "id": "evt-auto-3611",
+    "id": "evt-auto-5",
     "name": "Pista (21/11/2025)",
     "date": "2025-11-21",
     "totalRevenue": 63652,
@@ -157,25 +181,26 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "cortesias": 353,
     "coupons": {
       "PARKERS": 193,
-      "FESTASZS": 19,
-      "GIRLS": 18,
-      "ANABIA": 16,
-      "RVC": 13,
       "BRAGA": 11,
-      "AGUIA": 11,
       "MGM": 10,
+      "AGUIA": 11,
+      "GIRLS": 18,
+      "RVC": 13,
       "GODOY": 9,
+      "ANABIA": 16,
+      "BOLA": 2,
       "ERROR": 6,
+      "SALIM": 2,
+      "FESTASZS": 19,
+      "BALADA": 2,
       "FLAGE": 3,
       "MARROM": 3,
-      "AGNOVA": 3,
-      "BOLA": 2,
-      "SALIM": 2,
-      "BALADA": 2,
       "CONECTA": 2,
-      "VODKA": 1
+      "VODKA": 1,
+      "AGNOVA": 3,
+      "BR": 1
     },
-    "totalCoupons": 324,
+    "totalCoupons": 325,
     "totalPayingQty": 712,
     "percentPaying": 66.85446009389672,
     "avgTicket": 89.39887640449439,
@@ -184,30 +209,36 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "doorTM": 0,
     "dailySales": [],
     "preSaleRevenue": 63652,
-    "preSaleQty": 1065
+    "preSaleQty": 1065,
+    "avgAge": 22.2,
+    "salesChannels": {
+      "pos": 632,
+      "site": 344,
+      "app": 89
+    }
   },
   {
-    "id": "evt-auto-4676",
+    "id": "evt-auto-6",
     "name": "Primeira Sexta (02/01/2026)",
     "date": "2026-01-02",
     "totalRevenue": 61202,
     "totalAudience": 978,
     "cortesias": 321,
     "coupons": {
-      "PARKERS": 92,
-      "GIRLS": 31,
-      "FESTASZS": 27,
-      "BRAGA": 16,
-      "AGONIA": 8,
-      "SALIM": 7,
       "GODOY": 6,
-      "BOLA": 4,
+      "PARKERS": 92,
       "YASFRANCO": 3,
-      "ANABIA": 3,
-      "FLAGE": 3,
+      "FESTASZS": 27,
       "AGNOVA": 2,
+      "ANABIA": 3,
+      "GIRLS": 31,
+      "BALADA": 1,
       "CONECTA": 2,
-      "BALADA": 1
+      "SALIM": 7,
+      "BOLA": 4,
+      "FLAGE": 3,
+      "AGONIA": 8,
+      "BRAGA": 16
     },
     "totalCoupons": 205,
     "totalPayingQty": 657,
@@ -218,10 +249,16 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "doorTM": 0,
     "dailySales": [],
     "preSaleRevenue": 61202,
-    "preSaleQty": 978
+    "preSaleQty": 978,
+    "avgAge": 22.9,
+    "salesChannels": {
+      "pos": 633,
+      "site": 276,
+      "app": 69
+    }
   },
   {
-    "id": "evt-auto-5654",
+    "id": "evt-auto-7",
     "name": "Ruby (12/12/2025)",
     "date": "2025-12-12",
     "totalRevenue": 32567,
@@ -230,21 +267,22 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "coupons": {
       "PARKERS": 74,
       "AGNOVA": 28,
-      "GODOY": 26,
-      "SALIM": 24,
       "GIRLS": 20,
+      "SALIM": 24,
       "HELENA": 12,
+      "FLAGE": 2,
+      "BOLA": 1,
+      "GODOY": 26,
+      "LAGOA": 1,
+      "CONECTA": 3,
       "BRAGA": 5,
       "CEBOLA": 4,
-      "CONECTA": 3,
-      "FLAGE": 2,
+      "FESTASZS": 1,
+      "LC": 2,
       "ANABIA": 2,
-      "AGONIA": 2,
-      "BOLA": 1,
-      "LAGOA": 1,
-      "FESTASZS": 1
+      "AGONIA": 2
     },
-    "totalCoupons": 205,
+    "totalCoupons": 207,
     "totalPayingQty": 410,
     "percentPaying": 55.934515688949524,
     "avgTicket": 79.43170731707318,
@@ -253,28 +291,34 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "doorTM": 0,
     "dailySales": [],
     "preSaleRevenue": 32567,
-    "preSaleQty": 733
+    "preSaleQty": 733,
+    "avgAge": 21.6,
+    "salesChannels": {
+      "pos": 491,
+      "site": 197,
+      "app": 45
+    }
   },
   {
-    "id": "evt-auto-6387",
+    "id": "evt-auto-8",
     "name": "Saidera (05/12/2025)",
     "date": "2025-12-05",
     "totalRevenue": 56778,
     "totalAudience": 1036,
     "cortesias": 372,
     "coupons": {
-      "PARKERS": 98,
-      "AGNOVA": 66,
-      "AGONIA": 34,
       "SOPRAAMIGOS": 21,
-      "GIRLS": 19,
+      "SAIDERA": 5,
+      "AGNOVA": 66,
       "FESTASZS": 18,
+      "PARKERS": 98,
       "GODOY": 18,
-      "BOLA": 8,
+      "AGONIA": 34,
+      "GIRLS": 19,
       "BRAGA": 6,
+      "BOLA": 8,
       "FLAGE": 6,
       "CONECTA": 6,
-      "SAIDERA": 5,
       "RVC": 2,
       "SALIM": 1
     },
@@ -287,32 +331,39 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "doorTM": 0,
     "dailySales": [],
     "preSaleRevenue": 56778,
-    "preSaleQty": 1036
+    "preSaleQty": 1036,
+    "avgAge": 22.1,
+    "salesChannels": {
+      "pos": 638,
+      "site": 304,
+      "app": 94
+    }
   },
   {
-    "id": "evt-auto-7423",
+    "id": "evt-auto-9",
     "name": "Sweet (16/01/2026)",
     "date": "2026-01-16",
     "totalRevenue": 38096,
     "totalAudience": 754,
     "cortesias": 287,
     "coupons": {
-      "PARKERS": 58,
-      "AGNOVA": 32,
-      "FESTASZS": 30,
-      "ANABIA": 29,
       "GIRLS": 24,
-      "CONECTA": 19,
       "GODOY": 14,
+      "ANABIA": 29,
+      "CONECTA": 19,
+      "FESTASZS": 30,
       "BOLA": 11,
-      "VODKA": 3,
-      "SALIM": 3,
+      "PARKERS": 58,
       "BRAGA": 2,
-      "FLAGE": 2,
+      "AGNOVA": 32,
+      "VODKA": 3,
       "BALADA": 1,
-      "LAGOA": 1
+      "SALIM": 3,
+      "LAGOA": 1,
+      "FLAGE": 2,
+      "BR": 3
     },
-    "totalCoupons": 229,
+    "totalCoupons": 232,
     "totalPayingQty": 467,
     "percentPaying": 61.936339522546426,
     "avgTicket": 81.57601713062098,
@@ -321,32 +372,38 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "doorTM": 0,
     "dailySales": [],
     "preSaleRevenue": 38096,
-    "preSaleQty": 754
+    "preSaleQty": 754,
+    "avgAge": 25.2,
+    "salesChannels": {
+      "pos": 481,
+      "site": 225,
+      "app": 48
+    }
   },
   {
-    "id": "evt-auto-8177",
+    "id": "evt-auto-10",
     "name": "Valeu Natalina (26/12/2025)",
     "date": "2025-12-26",
     "totalRevenue": 57441,
     "totalAudience": 1036,
     "cortesias": 360,
     "coupons": {
-      "PARKERS": 89,
       "GODOY": 50,
-      "CONECTA": 33,
-      "GIRLS": 21,
       "AGNOVA": 15,
       "SALIM": 15,
-      "BRAGA": 10,
-      "FESTASZS": 9,
-      "YASFRANCO": 6,
+      "GIRLS": 21,
+      "PARKERS": 89,
+      "FLAGE": 3,
       "BOLA": 5,
       "ANABIA": 5,
-      "RVC": 4,
-      "FLAGE": 3,
-      "VODKA": 3,
+      "CONECTA": 33,
+      "BRAGA": 10,
       "AGONIA": 2,
-      "RIO": 2
+      "YASFRANCO": 6,
+      "RIO": 2,
+      "FESTASZS": 9,
+      "RVC": 4,
+      "VODKA": 3
     },
     "totalCoupons": 272,
     "totalPayingQty": 676,
@@ -357,7 +414,12 @@ export const CONSOLIDATED_EVENTS: ProcessedEvent[] = [
     "doorTM": 0,
     "dailySales": [],
     "preSaleRevenue": 57441,
-    "preSaleQty": 1036
+    "preSaleQty": 1036,
+    "avgAge": 21.3,
+    "salesChannels": {
+      "pos": 637,
+      "site": 279,
+      "app": 120
+    }
   }
-]
-;
+];

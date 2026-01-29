@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { parseReportCSV, parseEventosNovaCSV } from '../utils/csvParser';
 import { CONSOLIDATED_EVENTS } from '../data/consolidated_events';
 import type { ProcessedEvent } from '../types/Analytics';
+import { getManualData } from '../utils/storage';
 
 // Sample data placeholders need to be accessible here, or duplicatable. 
 // Ideally exported from a constant file, but for now reproducing or moving them is best.
@@ -316,9 +317,10 @@ SUBTOTAL DEZEMBRO>>>>,,4,"R$ 0,00","R$ 88.256,28","R$ 146.254,00","R$ 55.180,00"
 export function useEventData() {
     const [events, setEvents] = useState<ProcessedEvent[]>([]);
 
-    useEffect(() => {
+    const loadData = () => {
         const reportEvents = parseReportCSV(PLACEHOLDER_REPORT);
         const novaEvents = parseEventosNovaCSV(PLACEHOLDER_EVENTS_NOVA);
+        const manualDataMap = getManualData();
 
         const mergedEvents = [...reportEvents];
 
@@ -370,11 +372,29 @@ export function useEventData() {
             }
         });
 
+        // 3. Merge Manual Data
+        mergedEvents.forEach(evt => {
+            const manual = manualDataMap[evt.id];
+            if (manual) {
+                evt.manualData = manual;
+                if (manual.location) evt.location = manual.location;
+            }
+        });
+
         // Filter and Sort
-        const finalEvents = mergedEvents.filter(e => (e.totalRevenue > 0 || (e.barRevenue || 0) > 0));
+        const finalEvents = mergedEvents.filter(e => (e.totalRevenue > 0 || (e.barRevenue || 0) > 0 || (e.manualData?.barGrossRevenue || 0) > 0));
         finalEvents.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
         setEvents(finalEvents);
+    };
+
+    useEffect(() => {
+        loadData();
+
+        // Listen for manual updates to refresh data without reload
+        window.addEventListener('storage', loadData); // Listen to other tabs?
+        window.addEventListener('manualDataUpdated', loadData);
+        return () => window.removeEventListener('manualDataUpdated', loadData);
     }, []);
 
     return { events };
